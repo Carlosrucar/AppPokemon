@@ -20,7 +20,7 @@ session_start();
                         <a class="nav-link" href="./">home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="product">pokemon</a> <!-- Enlace corregido -->
+                        <a class="nav-link" href="product">pokemon</a> 
                     </li>
                 </ul>
             </div>
