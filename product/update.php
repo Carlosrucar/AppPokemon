@@ -57,7 +57,7 @@ if(isset($_POST['price'])) {
     exit;
 }
 //debería meter la misma validación que antes en store.php
-$sql = 'update product set name = :name, price = :price where id = :id';
+$sql = 'update pokemon set name = :name, peso = :peso, tipo = :tipo, numero = :numero where id = :id';
 $sentence = $connection->prepare($sql);
 $parameters = ['name' => $name, 'price' => $price, 'id' => $id];
 foreach($parameters as $nombreParametro => $valorParametro) {
@@ -66,11 +66,11 @@ foreach($parameters as $nombreParametro => $valorParametro) {
 try {
     $sentence->execute();
     $resultado = $sentence->rowCount();
-    $url = '.?op=editproduct&result=' . $resultado;
+    $url = '.?op=editpokemon&result=' . $resultado;
 } catch(PDOException $e) {
     $resultado = 0;
     $_SESSION['old']['name'] = $name;
     $_SESSION['old']['price'] = $price;
-    $url = 'edit.php?id=' . $id . '&op=editproduct&result=' . $resultado;
+    $url = 'edit.php?id=' . $id . '&op=editpokemon&result=' . $resultado;
 }
 header('Location: ' . $url);

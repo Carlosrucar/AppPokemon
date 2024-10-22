@@ -25,7 +25,7 @@ try {
 
 // -> 
 $resultado = 0;
-$url = 'create.php?op=insertproduct&result=' . $resultado;
+$url = 'create.php?op=insertpokemon&result=' . $resultado;
 
 if(isset($_POST['name']) && isset($_POST['price']) ) {
     $name = $_POST['name'];
@@ -41,7 +41,7 @@ if(isset($_POST['name']) && isset($_POST['price']) ) {
     }
 
     if($ok) {
-        $sql = 'insert into product (name, price) values (:name, :price)';
+        $sql = 'insert into pokemon (name, price) values (:name, :price)';
         $sentence = $connection->prepare($sql);
         $parameters = ['name' => $name, 'price' => $price];
         foreach($parameters as $nombreParametro => $valorParametro) {
@@ -51,7 +51,7 @@ if(isset($_POST['name']) && isset($_POST['price']) ) {
         try {
             $sentence->execute();
             $resultado = $connection->lastInsertId();
-            $url = 'index.php?op=insertproduct&result=' . $resultado;
+            $url = 'index.php?op=insertpokemon&result=' . $resultado;
         } catch(PDOException $e) {
         }
     }

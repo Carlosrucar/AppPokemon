@@ -20,7 +20,7 @@ session_start();
                         <a class="nav-link" href="./">home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="product">product</a> <!-- Enlace corregido -->
+                        <a class="nav-link" href="product">pokemon</a> <!-- Enlace corregido -->
                     </li>
                 </ul>
             </div>
@@ -42,7 +42,7 @@ session_start();
                 }
                 ?>
                 <div class="row">
-                    <h3>Products, etc.</h3>
+                    <h3>Pokemons, etc.</h3>
                 </div>
                 <div class="row">
                     <?php
@@ -58,7 +58,7 @@ session_start();
                     }
                     ?>
                     &nbsp;
-                    <a href="product" class="btn btn-success">Products</a>
+                    <a href="product" class="btn btn-success">pokemons</a>
                 </div>
                 <hr>
             </div>

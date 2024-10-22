@@ -18,7 +18,7 @@ if(isset($_GET['id'])) {
     echo 'no id';
     exit;
 }
-$sql = 'select * from product where id = :id';
+$sql = 'select * from pokemon where id = :id';
 $sentence = $connection->prepare($sql);
 $parameters = ['id' => $id];
 foreach($parameters as $nombreParametro => $valorParametro) {
@@ -54,7 +54,7 @@ $connection = null;
                         <a class="nav-link" href="..">home</a>
                     </li>
                     <li class="nav-item active">
-                        <a class="nav-link" href="./">product</a>
+                        <a class="nav-link" href="./">pokemon</a>
                     </li>
                 </ul>
             </div>
@@ -62,22 +62,30 @@ $connection = null;
         <main role="main">
             <div class="jumbotron">
                 <div class="container">
-                    <h4 class="display-4">products</h4>
+                    <h4 class="display-4">pokemons</h4>
                 </div>
             </div>
             <div class="container">
                 <div>
                     <div class="form-group">
-                        product id #:
+                        pokemon id #:
                         <?= $fila['id'] ?>
                     </div>
                     <div class="form-group">
-                        product name:
-                        <?= $fila['name'] ?>
+                        pokemon nombre:
+                        <?= $fila['nombre'] ?>
                     </div>
                     <div class="form-group">
-                        product price:
-                        <?= $fila['price'] ?>
+                        pokemon peso:
+                        <?= $fila['peso'] ?>
+                    </div>
+                    <div class="form-group">
+                        pokemon tipo:
+                        <?= $fila['tipo'] ?>
+                    </div>
+                    <div class="form-group">
+                        pokemon numero:
+                        <?= $fila['numero'] ?>
                     </div>
                     <div class="form-group">
                         <a href="./">back</a>
