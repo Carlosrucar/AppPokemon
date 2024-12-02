@@ -1,6 +1,6 @@
 (function () {
 
-    let tabla = document.getElementById('tablaProducto');
+    let tabla = document.getElementById('tablaPokemon'); 
 
     if(tabla) {
         tabla.addEventListener('click', clickTable);
@@ -14,7 +14,11 @@
     }
 
     function confirmDelete(event) {
-        if(!confirm('Confirm delete?')) {
+        if(confirm('Confirm delete?')) {
+            setTimeout(function() {
+                alert('Record deleted successfully');
+            }, 500); 
+        } else {
             event.preventDefault();
         }
     }

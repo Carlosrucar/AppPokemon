@@ -79,7 +79,7 @@ try {
         <div class="row">
             <h3>Pokémon List</h3>
         </div>
-        <table class="table table-striped table-hover" id="tablaPokemon">
+                <table class="table table-striped table-hover" id="tablaPokemon">
             <thead>
                 <tr>
                     <th>ID</th>
@@ -128,6 +128,7 @@ try {
 <footer class="container">
     <p>&copy; Pokémon 2024</p>
 </footer>
+<script src="./js/script.js"></script>
 </body>
 </html>
 
